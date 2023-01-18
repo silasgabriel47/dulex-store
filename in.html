@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signup</title>
+    <link rel="stylesheet" href="up.css"/>
+    <link rel="icon" type="image/png" href="/images/LOGO.png" />
+</head>
+<body onload="Slider()">
+    <marquee  behavior="" direction="left">WELCOME TO DULEX STORE WHERE YOU GET THE BEST PRODUCTS EVER WITH GREAT QUALITIES. . . . . .
+         ALL MALE AND FEMALE WEARS AND ACCESSORIES ARE AVAILIABLE. . . . . . . WE CELEBRATE YOU. . . . .</marquee>
+    <!--// banner starts -->
+    <div class="banner">
+        <div class="Slider">
+            <img src="/images/1.png" id="slideimg">
+        </div>
+        <div class="overlay">
+             <!--// logo start -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/LOGO.png" alt="">
+                </div>
+            </div>
+            <!--// logo ends -->
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <form action="index.html">
+                    <div class="input_group">
+                        <div class="input_field" id="namefield">
+                            <img src="/icons/user1.png" class="form_icons">
+                            <input type="text" placeholder="Name"  id="name" ">
+                        </div>
+    
+                        <div class="input_field">
+                            <img src="/icons/download (5).png" class="form_icons">
+                            <input type="email" placeholder="Email" id="email" required="required">
+                        </div>
+    
+    
+                        <div class="input_field">
+                            <img src="/icons/download (6).png" class="form_icons">
+                            <input type="password" id="password" placeholder="Password" required="required">
+                        </div>
+                        <p>Fogotten password <a href="#"> Click here</a></p>
+
+                    </div>
+                     <div class="btn-field">
+                            
+                            <button type="submit" id="signupBtn"  >Sign up</button>
+                            <button type="submit" id="signinBtn" class="disable">Sign in</button>
+                        </div>
+                </form>
+
+            </div>
+            <!--// banner js-effect starts -->
+            <script>
+                var slideimg= document.getElementById("slideimg");
+
+                var images= new Array(
+                       "/images/2.png",
+                       "/images/4.png",
+                       "/images/5.png",
+                       "/images/1.png"
+                     
+                   );
+                var len= images.length;
+                var i = 0;
+
+                function Slider(){
+                    if (i > len-1) {
+                        i = 0;
+                        
+                    }
+                    slideimg.src = images[i];
+                    i++;
+                    setTimeout('Slider()',3000)
+                }
+
+            </script>
+            <!--// banner js-effect ends -->
+        </div>
+
+    </div>
+      <!--// form js-effect startss -->
+    <script>
+
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let c = document.getElementById("namefield");
+let title= document.getElementById("title");
+
+<!--// form js-effect for hiding is up form startss -->
+signinBtn.onclick = function(){
+    namefield.style.maxHeight = "0";
+    title.innerHTML= "Sign In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+}
+
+// form js-effect for hiding is up form ends -->
+
+<!--// form js-effect for hiding is up form startss -->
+signupBtn.onclick = function(){
+    namefield.style.maxHeight = "60px";
+    title.innerHTML= "Sign Up";
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+}
+
+// form js-effect for hiding is up form ends -->
+
+    </script>
+    <script>
+        function auth(){
+            var email
+        }
+    </script>
+      <!--// form js-effect ends -->
+
+</body>
+</html>
